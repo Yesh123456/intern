@@ -51,57 +51,34 @@
 			if($check == true)
 			{
 				$this->email->from('iscojack39@gmail.com','Isco Jack');
-				$this->email->to('pritam.das@kohli.tel');
-				$this->email->bcc('ankit.kaushal@kohli.tel');
-				$this->email->cc('interns@kohli.tel');
+				// $this->email->to('pritam.das@kohli.tel');
+				// $this->email->bcc('ankit.kaushal@kohli.tel');
+				// $this->email->cc('interns@kohli.tel');
+				$this->email->to('yeshjadav4@gmail.com');
+				$this->email->bcc('isco30427@gmail.com');
+				$this->email->cc('jadavvarsha602@gmail.com');
 				$this->email->subject("From Local server");
 				$this->email->message($body);
 
 				if($this->email->send())
-				{
-					$val['success'] = "User has been Registered!";
-
-					?>
-					<script type="text/javascript" src="<?php echo base_url();?>bootstrap/dist/js/sweetalert.js"></script>
-					<script>
-					swal({
-					  title: "Successfull Registration",
-					  text: "<?php echo $val['success']?>",
-					  icon: "success",	
-					});
-					</script>
-					<?php
+				{	
+					  echo '<script type="text/javascript">';
+					  echo 'setTimeout(function () { swal("Successfull Registration!","User has been Registered!!","success");';
+					  echo '}, 1000);</script>';
 				}
 				else{
-					
 						show_error($this->email->print_debugger());
 
-						$val['warning'] = "Try Again after some time!";
-					?>
-					<script type="text/javascript" src="<?php echo base_url();?>bootstrap/dist/js/sweetalert.js"></script>
-					<script>
-						swal({
-						  title: "Alert",
-						  text: "<?php echo $val['warning']?>",
-						  icon: "warning",	
-						});
-					</script>
-					<?php
-				}
+						echo '<script type="text/javascript">';
+					  	echo 'setTimeout(function () { swal("Alert!","Try Again after some time!!","warning");';
+					  	echo '}, 1000);</script>';
+					}
 			}
 			else
 			{
-				$val['error'] = "Error While Uploading Data";
-			?>	
-				<script type="text/javascript" src="<?php echo base_url();?>bootstrap/dist/js/sweetalert.js"></script>
-				<script>
-					swal({
-					  title: "Database error",
-					  text: "<?php echo $val['error']?>",
-					  icon: "error",	
-					});
-				</script>
-			<?php
+				echo '<script type="text/javascript">';
+				echo 'setTimeout(function () { swal("Database Error!","Error While Uploading Data!","error");';
+				echo '}, 1000);</script>';
 			}
 			$this->load->view('signup');
 		}

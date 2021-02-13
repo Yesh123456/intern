@@ -69,6 +69,7 @@
 	  		var x5 = document.sign.txtPassword1.value;
 	  		var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 			var age = /^[1-9]?[0-9]{1}$|^100$/;
+			var pass = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
 	  		// if (x == "") {
 	    // 		alert("Please Enter Your Name");
@@ -95,7 +96,7 @@
 			// 	return false;
 			// }
 
-			if(x2.length!=10){
+			if(x2.length!=10 && x2.length > 10 && x2.length < 9){
 				alert("Invalid Phone number");
 				return false;
 			}
@@ -115,8 +116,8 @@
 			// 	return false;
 			// }
 
-			if(x4.length < 6 || x4.length > 15){
-				alert("Invalid Password credentials (Length must be greater than 6)");
+			if(x4.match(pass)){
+				alert("Invalid Password credentials (Length must be greater than 8 with a symbol,upper & lower case and nummber)");
 				return false;
 			}
 
@@ -126,7 +127,7 @@
 			// }
 
 			if(x5 != x4){
-				alert("Password Don't match");
+				alert("Confirm Password Don't match");
 				return false;
 			}
 
