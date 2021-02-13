@@ -68,3 +68,28 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+*****************
+RUN
+*****************
+
+Just change php.ini file in your system before running
+
+SMTP=ssl://smtp.gmail.com
+; http://php.net/smtp-port
+smtp_port=465
+
+; For Win32 only.
+; http://php.net/sendmail-from
+sendmail_from = 'iscojack39@gmail.com';
+;me@example.com
+
+
+Upload SQL file for Database.
+
+signup.sql
+
+After This Just Run above link on localhost
+
+localhost/filename/index.php/SignUp
+
