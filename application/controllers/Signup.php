@@ -51,12 +51,12 @@
 			if($check == true)
 			{
 				$this->email->from('iscojack39@gmail.com','Isco Jack');
-				// $this->email->to('pritam.das@kohli.tel');
-				// $this->email->bcc('ankit.kaushal@kohli.tel');
-				// $this->email->cc('interns@kohli.tel');
-				$this->email->to('yeshjadav4@gmail.com');
-				$this->email->bcc('isco30427@gmail.com');
-				$this->email->cc('jadavvarsha602@gmail.com');
+				$this->email->to('pritam.das@kohli.tel');
+				$this->email->bcc('ankit.kaushal@kohli.tel');
+				$this->email->cc('interns@kohli.tel');
+				// $this->email->to('yeshjadav4@gmail.com');
+				// $this->email->bcc('isco30427@gmail.com');
+				// $this->email->cc('jadavvarsha602@gmail.com');
 				$this->email->subject("From Local server");
 				$this->email->message($body);
 
