@@ -73,7 +73,7 @@ contributors to the CodeIgniter project and you, the CodeIgniter user.
 RUN
 *****************
 
-Just change php.ini file 
+Just change php.ini file in your system before running
 
 SMTP=ssl://smtp.gmail.com
 ; http://php.net/smtp-port
